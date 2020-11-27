@@ -96,8 +96,6 @@ class SimpleTopo(Topo):
         self.addLink('R3', 'R4')
         self.addLink('R3', 'R5')
         self.addLink('R4', 'R5')
-        for i in xrange(num_ases-1):
-            self.addLink('R%d' % (i+1), 'R%d' % (i+2))
 
         routers.append(self.addSwitch('R6'))
         for j in xrange(num_hosts_per_as):
